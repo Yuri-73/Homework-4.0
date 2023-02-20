@@ -42,8 +42,9 @@ public class Main {
     public static void task5() {
         System.out.println("Задача 5");
         System.out.println("Високосные годы в заданном промежутке времени:");
-        for(int i = 1904; i <= 2096; i = i + 4)
-            System.out.print(i + " ");
+        for(int year = 1904; year <= 2096; year += 4)
+            if(year % 4 == 0 || (year % 400 == 0 && year % 100 != 0))
+               System.out.print(year + " ");
         System.out.println("");
     }
     public static void task6() {
@@ -72,18 +73,17 @@ public class Main {
     public static void task9() {
         System.out.println("Задача 9");
         int salary = 29000;
-        int total = 0;
+        double total = 0;
         for(int i = 1; i <= 12; i++) {
             total = total + total / 100;
-            total = total + salary;
+            total = (double) total + salary;
             System.out.println("Месяц " + i + ". Сумма накоплений  с 12% годовых равна " + total + " рублей");
         }
     }
     public static void task10() {
         System.out.println("Задача 10");
-        int sum;
         for(int i = 1; i <= 10; i++) {
-           sum =  2 * i;
+           int sum = 2 * i;
            System.out.println("2 * " + i + " = " + sum);
         }
     }
