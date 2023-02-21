@@ -43,7 +43,7 @@ public class Main {
         System.out.println("Задача 5");
         System.out.println("Високосные годы в заданном промежутке времени:");
         for(int year = 1904; year <= 2096; year += 4)
-            if(year % 4 == 0 || (year % 400 == 0 && year % 100 != 0))
+            if((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
                System.out.print(year + " ");
         System.out.println("");
     }
